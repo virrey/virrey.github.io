@@ -1,0 +1,38 @@
+# Permalinks
+permalink:           pretty
+
+# Setup
+title:               A. Virrey
+tagline:             Chaotic Neutral Blog
+url:                 http://virrey.github.io
+paginate:            2
+baseurl:             ""
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+# About/contact
+author:
+  name:              Ari Virrey
+  url:               https://www.linkedin.com/in/arivirrey/
+  email:             ari.virrey@gmail.com
+
+# Custom vars
+version:             2.0.0
+github:
+  repo:              https://github.com/virrey
+
+# Gems
+gems:
+  - jekyll-paginate
+  - jekyll-gist
+
+# Page List
+pages_list:       
+  About: '/about'
+  Archive: '/archive'
+  Feed: '/index.html'
