@@ -1,7 +1,10 @@
-Welcome to the first posting! I put in in my head to enact a 'one-analysis-per-day' rule. This is the first result. It's been a long day, but it is what it is.
-I ventured over to [Data.gov|'data.gov']
+Welcome to the first posting!
+
+I put in in my head to enact a 'one-analysis-per-day' rule, and this is the first result. I ventured over to [Data.gov](data.gov) to find some recall information. [Source URL](https://catalog.data.gov/dataset?q=recall&groups=safety3175#topic=safety_navigation).
+
+After converting to CSV and some minor cleaning, I used the following code to convert it into a pandas data frame for some basic exploratory data analysis. This is not in-depth, but more of an attempt to get more practice with pandas data frames. Future analysis will get deeper as I learn and get more comfortable with Python. Comments appreciated in support of the learning process. 
+
 ```python
-# Source: https://catalog.data.gov/dataset?q=recall&groups=safety3175#topic=safety_navigation
 import pandas as pd
 import matplotlib.pyplot as plt
 from datetime import datetime as dt
@@ -20,7 +23,7 @@ yrs = list(range(2005,2015,1))
 rdf = get_data(yrs)
 ```
 
-Text
+Data is from 2005 to 2014. As such, this for loop imports all the CSV files I have stored locally. I encountered a utf-8 error and thanks to the folks at [Stackoverflow](https://stackoverflow.com/questions/19699367/unicodedecodeerror-utf-8-codec-cant-decode-byte) I was able to determine that this encoding would help resolve my issue. Problem solved!
 
 ```python
 rdf[pd.to_numeric(rdf['rPounds'], errors='coerce').notnull()].reset_index()
