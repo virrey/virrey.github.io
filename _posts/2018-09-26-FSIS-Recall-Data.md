@@ -49,7 +49,7 @@ sDt1 = rdf.rYr.value_counts().sort_index()
 sDt1.plot();
 ```
 
-  ![Image test](../images/plot.png)
+  ![Image test]({{ site.baseurl }}/images/plot.png)
 
 Lastly we plot the Months data as a bar.
 
@@ -58,10 +58,9 @@ sDt2 = rdf.rMo.value_counts().sort_index()
 sDt2.plot.bar(color='skyblue');
 ```
 
-  ![Image test](../images/bar.png)
+  ![Image test]({{ site.baseurl }}/images/bar.png)
 
 Stay Chaotic -- Stay Neutral
-
 
 
 [ARI](mailto:ari.virrey@gmail.com)
