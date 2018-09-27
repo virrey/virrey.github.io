@@ -1,6 +1,6 @@
 Welcome to the first posting!
 
-I put in in my head to enact a 'one-analysis-per-day' rule, and this is the first result. I ventured over to [Data.gov]() to find some recall information. [Source URL](https://catalog.data.gov/dataset?q=recall&groups=safety3175#topic=safety_navigation).
+I put in in my head to enact a 'one-analysis-per-day' rule, and this is the first result. I ventured over to [Data.gov](data.gov) to find some recall information. [Source URL](https://catalog.data.gov/dataset?q=recall&groups=safety3175#topic=safety_navigation).
 
 After converting to CSV and some minor cleaning, I used the following code to convert it into a pandas data frame for some basic exploratory data analysis. This is not in-depth, but more of an attempt to get more practice with pandas data frames. Future analysis will get deeper as I learn and get more comfortable with Python. Comments appreciated in support of the learning process. 
 
