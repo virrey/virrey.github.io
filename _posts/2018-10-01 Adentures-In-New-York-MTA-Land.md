@@ -243,7 +243,7 @@ plt.show()
 ```
 
 
-![svg](2018-10-01%20Adentures-In-New-York-MTA-Land_files/2018-10-01%20Adentures-In-New-York-MTA-Land_22_0.svg)
+![Image test]({{ site.baseurl }}/images/2018-10-01 Adentures-In-New-York-MTA-Land_22_0.svg)
 
 
 #### NICE!
@@ -306,5 +306,5 @@ plt.show()
 ```
 
 
-![svg](2018-10-01%20Adentures-In-New-York-MTA-Land_files/2018-10-01%20Adentures-In-New-York-MTA-Land_27_0.svg)
+![Image test]({{ site.baseurl }}/images/2018-10-01 Adentures-In-New-York-MTA-Land_22_1.svg)
 
