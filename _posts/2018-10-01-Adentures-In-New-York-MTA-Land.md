@@ -11,8 +11,7 @@ As a new data scientist I have a desire for exploration. However, learning a new
 
 #### Imports
 
-Pandas allows us to explore our data with a dataframe object which is where most of the exploration happens.
-Datetime is what converts our date and time strings into a datetime object that allows for more advanced parsing of date information. Specifically helping us parse out weekdays from weekends or classifying dates by their week number which allows for grouping data into weeks.
+Pandas allows us to explore our data with a dataframe object which is where most of the exploration happens. Datetime is what converts our date and time strings into a datetime object that allows for more advanced parsing of date information. Specifically helping us parse out weekdays from weekends or classifying dates by their week number which allows for grouping data into weeks.
 
 
 ```python
@@ -89,19 +88,19 @@ r.status_code
 ```
 
 
+```bash
+200
+```
 
-
-    200
-
-
-
+```python
 p = r.text
 soup = BeautifulSoup(p,'lxml')
-ahref = soup.find_all('a',href=re.compile('turnstile_1705'))
+ahref = soup.find_all('a',href=re.compile('turnstile_17'))
 myurls = []
 for i in ahref:
-​    myurls.append('http://web.mta.info/developers/'+i.get('href'))
+    myurls.append('http://web.mta.info/developers/'+i.get('href'))
 df = myextract(myurls)
+```
 
 #### What questions do we want to answer and how will we use Python to answer them?
 
@@ -131,33 +130,14 @@ df.sort_values(["C/A", "UNIT", "SCP", "STATION", "DATE_TIME"], inplace=True, asc
 df.drop_duplicates(subset=["C/A", "UNIT", "SCP", "STATION", "DATE_TIME"], inplace=True)
 ```
 
-
-```python
-df.columns = [column.strip() for column in df.columns]
-df['STATION'].apply(lambda x: x.strip())
-df["DATE_TIME"] = pd.to_datetime(df.DATE + " " + df.TIME, format="%m/%d/%Y %H:%M:%S")
-df.sort_values(["C/A", "UNIT", "SCP", "STATION", "DATE_TIME"], inplace=True, ascending=False)
-df.drop_duplicates(subset=["C/A", "UNIT", "SCP", "STATION", "DATE_TIME"], inplace=True)
-df = df.drop(["EXITS", "DESC"], axis=1, errors="ignore")
-df.groupby(["C/A", "UNIT", "SCP", "STATION", "DATE_TIME"]).ENTRIES\
-            .count().reset_index().sort_values("ENTRIES", ascending=False)
-df_daily = df.groupby(["C/A", "UNIT", "SCP", "STATION", "DATE"]).ENTRIES.first().reset_index().copy()
-```
-
 #### Shifting our data to build day-to-day deltas
 
 Here we create two new columns in our data called *PREV_DATE* and *PREV_ENTRIES*. We populate these columns using *.tranform* and a **lambda** function which *shifts* and grabs the prior date's *DATE* and *ENTRIES*. This is what finally allows us to create our *ENTRIES* field which contains our day-to-day deltas.
 
-```python
-df_daily[["PREV_DATE", "PREV_ENTRIES"]] = \
-                     (df_daily.groupby(["C/A", "UNIT", "SCP", "STATION"])["DATE", "ENTRIES"]\
-                     .transform(lambda grp: grp.shift(1)));
-```
-
 
 ```python
-df_daily[["PREV_DATE", "PREV_ENTRIES"]] = (df_daily.groupby(["C/A", "UNIT", "SCP", "STATION"])["DATE", "ENTRIES"]\
-                                           .transform(lambda grp: grp.shift(1)));
+df_daily[["PREV_DATE", "PREV_ENTRIES"]] = (df_daily.groupby(["C/A", "UNIT", "SCP",\
+                 "STATION"])["DATE", "ENTRIES"].transform(lambda grp: grp.shift(1)));
 ```
 
 #### The *get_daily_counts* function to clean our *DAILY_ENTRIES* column
@@ -221,16 +201,6 @@ df_medians_top5 = df_medians[:5]
 
 #### Lets plot these top 5
 
-```python
-df_medians_top5.plot.bar(x='STATION',y='median',color='blue')
-plt.xlabel('Station')
-plt.ylabel('Median')
-plt.title("Median Ridership for Top 5 Stations")
-plt.tight_layout()
-plt.savefig('medians_t5.svg')
-plt.show()
-```
-
 
 ```python
 df_medians_top5.plot.bar(x='STATION',y='median',color='blue')
@@ -265,35 +235,7 @@ df_iqr_top5 = (df_iqr
                   )
 ```
 
-
-
-
-```python
-df_iqr = (df_daily_sta
-              .groupby(['STATION'])['DAILY_ENTRIES']
-              .agg([stats.iqr])
-              .reset_index()
-              .sort_values(['iqr'], ascending=False)
-              )
-df_iqr_top5 = (df_iqr
-                  .loc[(df_iqr.STATION.isin(df_medians_top5.STATION))]
-                  .reset_index()
-                  .sort_values(['iqr'], ascending=False)
-                  )
-```
-
 #### Now lets plot these IQRs for the top 5
-
-```python
-df_iqr_top5.plot.bar(x='STATION',y='iqr',color='cyan')
-plt.xlabel('Station')
-plt.ylabel('Inter-Quartile Range')
-plt.title("IQR for Top 5 Stations")
-plt.tight_layout()
-plt.savefig('iqr_t5.svg')
-plt.show()
-```
-
 
 ```python
 df_iqr_top5.plot.bar(x='STATION',y='iqr',color='cyan')
