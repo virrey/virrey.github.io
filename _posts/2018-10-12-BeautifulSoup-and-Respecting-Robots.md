@@ -1,5 +1,5 @@
-Beautiful Soup is a Python library and is helpful in parsing web pages programmatically. But before we get into the world of web scraping, we need to have an understanding of the robots.txt file (robots file).
-The robots file is a file located at every web site. Try it, any top level url proceeded by /robots.txt
+Beautiful Soup is a Python library and is helpful in parsing web pages programmatically. But before we get into the world of web scraping, we need to have an understanding of the *robots.txt* file (robots file).
+The robots file is a file located at every web site. Try it at any top level url proceeded by /robots.txt
 
 Examples:
 www.google.com/robots.txt
@@ -9,8 +9,10 @@ So what does this robots file do? The robots file provides an exclusion standard
 
 The basic format of a robots file reads:
 
+```html
 User-agent: *
 Disallow: /
+```
 
 User-agent is who the rule applies to. Disallow are the folder and files the robot file indicates are not allowed to be crawled, indexed, or scraped. This example is the most aggressive of all robots exclusions, it indicates everyone is disallowed from everything.
 
