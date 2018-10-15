@@ -2,8 +2,8 @@
 permalink:           pretty
 
 # Setup
-title:               A Chaotic Neutral Blog
-tagline:             Ari Virrey
+title:               Ari Virrey
+tagline:             A Chaotic Neutral Blog
 url:                 http://www.arivirrey.com
 paginate:            2
 baseurl:             ""
