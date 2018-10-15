@@ -23,7 +23,12 @@ The example we have is using Beautiful Soup to scrape a list of stock tickers as
 ```python
 def buildCompanyDict():
 '''
-This function will give the user the option of a) loading the company_dictionary from a pickle file, b) scraping the list of items from a wikipedia page or, c) sideload via a csv file comp_dict is a basic 1-key:1-val that contains the Stock Ticker as the key and the name of the company as the value. (e.g. 'INTC':'Intel corp')
+This function will give the user the option of a) loading the\
+company_dictionary from a pickle file, b) scraping the list of\
+items from a wikipedia page or, c) sideload via a csv file\
+comp_dict is a basic 1-key:1-val that contains the Stock Ticker\
+as the key and the name of the company as the value.\
+(e.g. 'INTC':'Intel corp')
 '''
     comp_dict = defaultdict(str)
     opt = input("'p' for pickle load/n's' for soup scrape/n'sl' csv sideload")
@@ -58,8 +63,7 @@ This function will give the user the option of a) loading the company_dictionary
     return comp_dict
 ```
 
-This function will give the user the option of a) loading the company_dictionary from a pickle file
-b) scraping the list of items from a [wikipedia](en.wikipedia.org) page or c) sideload via a csv file.
+This function will give the user the option of a) loading the company_dictionary from a pickle file b) scraping the list of items from a [wikipedia](en.wikipedia.org) page or c) sideload via a csv file.
 comp_dict is a basic 1-key:1-val that contains the Stock Ticker as the key and the name of the
 company as the value. (e.g. 'INTC':'Intel corp'). Since our topic of interest is BeautifulSoup, I'll focus only on the part of the code encapsulated by the *elif opt == 's'*.
 
@@ -99,7 +103,7 @@ Now before we get into the *.find()* we need to go to our target page to really 
 
 Using the inspector in Chrome, we can see this section of the page is in a *div* with a *class* called *'div-col columns column-width'*. Therefore, our *find* method is setup to target this area of the page and store that in our *soup_table* variable.
 
-![chrome inspect]({{site.baseurl}}/images/1539564743518.jpg)
+![chrome inspect](../images/1539564743518.png)
 
 But we are interested in the individual items on the list. We tackle this by observing that each item in our list is encapsulated in *<li></li>* tags. And that is how we arrive at:
 
