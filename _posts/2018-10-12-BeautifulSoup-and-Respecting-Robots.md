@@ -108,7 +108,7 @@ Using the inspector in Chrome, we can see this section of the page is in a *div*
 
 ![chrome inspect](../images/1539564743518.png)
 
-But we are interested in the individual items on the list. We tackle this by observing that each item in our list is encapsulated in *<li></li>* tags. And that is how we arrive at:
+But we are interested in the individual items on the list. We tackle this by observing that each item in our list is encapsulated in   *<li></li>* tags. And that is how we arrive at:
 
 ```python
 import re
