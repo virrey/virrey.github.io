@@ -108,7 +108,7 @@ Using the inspector in Chrome, we can see this section of the page is in a *div*
 
 ![chrome inspect](../images/1539564743518.png)
 
-But we are interested in the individual items on the list. We tackle this by observing that each item in our list is encapsulated in   *<li></li>* tags. And that is how we arrive at:
+But we are interested in the individual items on the list. We tackle this by observing that each item in our list is encapsulated in   `<li></li>` tags. And that is how we arrive at:
 
 ```python
 import re
@@ -117,7 +117,7 @@ children = soup_table.findChildren('li')
 pat = re.compile(pattern=r'\(([a-zA-Z]*)\)')
 ```
 
-`findChildren` will look within the *div class* `soup_table` we previously extracted and find all instances of the *<li>* tags and break it out as a child of the parent. The `re.compile` specifies the regex pattern we will apply to our children to separate the stock ticker from the company name in the subsequent for loop. To use `re` you will need to import it. `re` allows you to do regular expressions. If you are unfamiliar with regular expressions, check out the Wikipedia article [here](https://en.wikipedia.org/wiki/Regular_expression).
+`findChildren` will look within the *div class* `soup_table` we previously extracted and find all instances of the `<li>` tags and break it out as a child of the parent. The `re.compile` specifies the regex pattern we will apply to our children to separate the stock ticker from the company name in the subsequent for loop. To use `re` you will need to import it. `re` allows you to do regular expressions. If you are unfamiliar with regular expressions, check out the Wikipedia article [here](https://en.wikipedia.org/wiki/Regular_expression).
 
 ```python
 for i in children:
