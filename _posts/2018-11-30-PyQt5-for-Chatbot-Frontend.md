@@ -114,3 +114,8 @@ if __name__ == '__main__':
     win.show()
     sys.exit(app.exec_())
 ```
+I hope you enjoyed reading and remember:
+
+Stay Chaotic – Stay Neutral
+
+[ARI](mailto:ari.virrey@gmail.com)
