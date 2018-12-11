@@ -3,7 +3,7 @@ I recently worked on a Chatbot that would recommend a wine based on document sim
 Here is a visual of the final UI in my project. In the code I’ll walk you through how to establish this kind of setup.
 
 <p align="center">
-  <img height="300" src="../images/winebot1.png"><img height="300" src="../images/winebot2.png">
+  <img height="300" src="../images/winebot1.png">&nbsp;<img height="300" src="../images/winebot2.png">
 </p>
 
 Here are the imports for my project. `QtWidgets` is the main import as this is what creates our app via `QApplication`, and when we create an `Window` class object we use `QtWidgets.QWidget`. The only functionality I use `QtCore.Qt` for is to switch the alignment of my `QTextEdit` object from left to right. This gives me the flexibility to give the impression of a back and forth chat dialog by putting the bot text on the right and the user text on the left. `QtGui.QFont` is used to resize the font of the button object and the user input `QLineEdit` object.
