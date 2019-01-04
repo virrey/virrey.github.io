@@ -11,4 +11,4 @@ Feel free to reach out to [Ari](mailto:ari.virrey@gmail.com).
 Thanks for reading!
 
 <p align="center">
-  <img height="300" src="https://virrey.github.io/images/metis_ari.jpg"></p>
+  <img height="500" src="https://virrey.github.io/images/metis_ari.jpg"></p>
