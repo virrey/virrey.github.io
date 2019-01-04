@@ -9,3 +9,6 @@ Ari holds a BS in Electronic Engineering Technology from DeVry University and a 
 Feel free to reach out to [Ari](mailto:ari.virrey@gmail.com).
 
 Thanks for reading!
+
+<p align="center">
+  <img height="300" src="https://virrey.github.io/images/metis_ari.jpg"></p>
