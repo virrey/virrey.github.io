@@ -239,7 +239,7 @@ dfpts.plot.scatter(x='pt1', y='pt2', c='class', colormap='viridis',\
 
 
 <p align="center">
-  <img height="300" src="../images/cc05.png"></p>
+  <img height="600" src="../images/cc05.png"></p>
 
 You should know I initially set out to do this without Pandas. I quickly realized there was huge benefit in using Pandas to achieve this. I hope you enjoyed this exercise. And please reach out with any questions or feedback. Thanks for reading, and remember:
 
