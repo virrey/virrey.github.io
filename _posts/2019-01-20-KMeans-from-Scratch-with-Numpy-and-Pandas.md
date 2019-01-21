@@ -173,8 +173,8 @@ init_centers.plot.scatter(x='pt1',y='pt2',c='class',\
 ```
 
 
-![png](2019-01-20-KMeans-from-Scratch-with-Numpy-and-Pandas_files/2019-01-20-KMeans-from-Scratch-with-Numpy-and-Pandas_25_0.png)
-
+<p align="center">
+  <img height="300" src="../images/cc01_i.png"></p>
 
 
 ```python
@@ -185,8 +185,8 @@ init_pts.plot.scatter(x='pt1',y='pt2',c='class',\
 ```
 
 
-![png](2019-01-20-KMeans-from-Scratch-with-Numpy-and-Pandas_files/2019-01-20-KMeans-from-Scratch-with-Numpy-and-Pandas_26_0.png)
-
+<p align="center">
+  <img height="300" src="../images/cc02_ic.png"></p>
 
 ##### Iterating to Final Clusters
 
@@ -208,8 +208,8 @@ centers.plot.scatter(x='pt1',y='pt2',c='class',\
 ```
 
 
-![png](2019-01-20-KMeans-from-Scratch-with-Numpy-and-Pandas_files/2019-01-20-KMeans-from-Scratch-with-Numpy-and-Pandas_30_0.png)
-
+<p align="center">
+  <img height="300" src="../images/cc03_f.png"></p>
 
 
 ```python
@@ -219,8 +219,8 @@ dfpts.plot.scatter(x='pt1',y='pt2',c='class',\
 ```
 
 
-![png](2019-01-20-KMeans-from-Scratch-with-Numpy-and-Pandas_files/2019-01-20-KMeans-from-Scratch-with-Numpy-and-Pandas_31_0.png)
-
+<p align="center">
+  <img height="300" src="../images/cc04_fc.png"></p>
 
 Finally, we can compare the before and after cluster centers and data point clustering using `subplots`.
 
@@ -238,8 +238,8 @@ dfpts.plot.scatter(x='pt1', y='pt2', c='class', colormap='viridis',\
 ```
 
 
-![png](2019-01-20-KMeans-from-Scratch-with-Numpy-and-Pandas_files/2019-01-20-KMeans-from-Scratch-with-Numpy-and-Pandas_33_0.png)
-
+<p align="center">
+  <img height="300" src="../images/cc05.png"></p>
 
 You should know I initially set out to do this without Pandas. I quickly realized there was huge benefit in using Pandas to achieve this. I hope you enjoyed this exercise. And please reach out with any questions or feedback. Thanks for reading, and remember:
 
