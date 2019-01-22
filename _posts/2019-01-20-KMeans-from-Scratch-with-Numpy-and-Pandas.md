@@ -75,7 +75,7 @@ def new_centers(df):
 
 ##### Initialize KMeans
 
-Alright, that was the hard part. Now let us setup the example. Here we are defining that we want to find 3 `clusters`. For simplicy and ease of visualization we are using 2 dimensions (x and y), but these dimensions will be based on your real world data which can extend hundereds of dimensions. `npts` is the number points we will generate per blob, and in this example I am  making 3 blobs because I'm seeking 3 clusters. Again, this is just random data for demonstration purposes. Finally, cycles defines how many times I want to re-average the clusters and re-classify the points. You would adjust this number based on your time, resource, and accuracy constraints and needs.
+Alright, that was the hard part. Now let us setup the example. Here we are defining that we want to find 3 `clusters`. For simplicy and ease of visualization we are using 2 dimensions (x and y), but these dimensions will be based on your real world data which can extend hundereds of dimensions. `npts` is the number points we will generate per blob, and in this example I am  making 3 blobs because I'm seeking 3 clusters. Again, this is just random data for demonstration purposes. Finally, `cycles` defines how many times I want to re-average the clusters and re-classify the points. You would adjust this number based on your time, resource, and accuracy constraints and needs.
 
 
 ```python
