@@ -43,7 +43,7 @@ def initialize_KMeans_Centers(df, c):
     return centers
 ```
 
-`nearest`: This function is essentially the kNN algorithm but it only retrieves the 1-Nearest item's classification. Each point `p` in our dataframe will go through and determine which of the cluster centers `c` it is closest too and retrieve that classification.
+`nearest`: This function is essentially the kNN algorithm but it only retrieves the 1-Nearest item's classification. Each point `p` in our dataframe will go through and determine which of the cluster centers `c` it is closest to and retrieve that classification.
 
 
 ```python
