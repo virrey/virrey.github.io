@@ -32,7 +32,7 @@ def make_blob(r1,r2,d,p):
     return [(r2-r1)*np.random.random_sample((d,))+r1 for i in range(p)]
 ```
 
-`initialize_KMeans_Centers`: When starting out we do not have cluster centers defined. The methodology calls for randomly selecting cluster centers. We will pass in our dataframe of points and `c` is the number of clusters we're defining. Using NumPy's `random.choice` function we select `c` number of items between 0 and `len(df)` which represents our range in the dataframe. We then reindex `centers` as a stanalone dataframe and set the `class` to it's `index`. It makes a good unique identifier.
+`initialize_KMeans_Centers`: When starting out we do not have cluster centers defined. The methodology calls for randomly selecting cluster centers. We will pass in our dataframe of points and `c` is the number of clusters we're defining. Using NumPy's `random.choice` function we select `c` number of items between 0 and `len(df)` which represents our range in the dataframe. We then reindex `centers` as a stanalone dataframe and set the `class` column to it's `index`. It makes a good unique identifier.
 
 
 ```python
@@ -53,7 +53,7 @@ def nearest(p,c):
     return clsf
 ```
 
-`classify`: This function is what calls the nearest function across all the data points in the dataframe using Pandas' `apply` the `nearest` function to our dataframe points and faciliated using a `lambda` expression.
+`classify`: This function is what calls the nearest function across all the data points in the dataframe using Pandas' `apply` method and a `lambda` expression to apply our `nearest` function to our dataframe points.
 
 
 ```python
