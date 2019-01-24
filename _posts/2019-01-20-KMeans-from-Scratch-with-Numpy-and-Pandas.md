@@ -159,7 +159,8 @@ init_centers.plot.scatter(x='pt1',y='pt2',c='class',\
                      xlim=(0,100),ylim=(0,100),title="Cluster Centers - Randomly Selected");
 ```
 
-![Image test]({{ site.baseurl }}/images/cc01_i.png)
+<p align="center">
+  <img height="300" src="../images/cc01_i.png"></p>
 
 ```python
 init_pts = dfpts.copy()
