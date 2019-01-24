@@ -158,9 +158,9 @@ init_centers.plot.scatter(x='pt1',y='pt2',c='class',\
                      colormap='viridis',figsize=(5,4),\
                      xlim=(0,100),ylim=(0,100),title="Cluster Centers - Randomly Selected");
 ```
-
+      
 <p align="center">
-  <img height="300" src="../images/cc01_i.png"></p>
+  <img height="300" src="virrey.github.io/images/cc01_i.png"></p>
 
 ```python
 init_pts = dfpts.copy()
@@ -171,7 +171,7 @@ init_pts.plot.scatter(x='pt1',y='pt2',c='class',\
 
 
 <p align="center">
-  <img height="300" src="../images/cc02_ic.png"></p>
+  <img height="300" src="virrey.github.io/images/cc02_ic.png"></p>
 
 ##### Iterating to Final Clusters
 
@@ -194,7 +194,7 @@ centers.plot.scatter(x='pt1',y='pt2',c='class',\
 
 
 <p align="center">
-  <img height="300" src="../images/cc03_f.png"></p>
+  <img height="300" src="virrey.github.io/images/cc03_f.png"></p>
 
 
 ```python
@@ -205,7 +205,7 @@ dfpts.plot.scatter(x='pt1',y='pt2',c='class',\
 
 
 <p align="center">
-  <img height="300" src="../images/cc04_fc.png"></p>
+  <img height="300" src="virrey.github.io/images/cc04_fc.png"></p>
 
 Finally, we can compare the before and after cluster centers and data point clustering using `subplots`.
 
@@ -224,7 +224,7 @@ dfpts.plot.scatter(x='pt1', y='pt2', c='class', colormap='viridis',\
 
 
 <p align="center">
-  <img height="600" src="../images/cc05.png"></p>
+  <img height="600" src="virrey.github.io/images/cc05.png"></p>
 
 You should know I initially set out to do this without Pandas. I quickly realized there was huge benefit in using Pandas to achieve this. I hope you enjoyed this exercise. And please reach out with any questions or feedback. Thanks for reading, and remember:
 
